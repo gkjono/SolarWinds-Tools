@@ -1,4 +1,4 @@
-SELECT TOP 10 i.Interfaces + v.Volumes AS [Elements]
+SELECT TOP 10 i.Interfaces + v.Volumes + 1 AS [Elements]
     , n.Caption AS [Node]
     , n.NodeID
     , n.IP_Address AS [IP]
