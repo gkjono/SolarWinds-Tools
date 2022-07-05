@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomPollers version="9.0">
+  <CustomPoller UniqueName="moduleStatus" Description="For Catalyst 6500 and 7600.  The operational status of the module. If the &#xD;&#xA; status is not ok , the value of moduleTestResult &#xD;&#xA; gives more detailed information about the &#xD;&#xA; module's failure condition(s)." OID="1.3.6.1.4.1.9.5.1.3.1.1.10" MIB="CISCO-STACK-MIB:moduleStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Cisco" PollerType="S" Parser="Enumeration" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.9.5.1.3.1.1.1">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="other" />
+      <Enumeration RawValue="2" TextValue="ok" />
+      <Enumeration RawValue="3" TextValue="minorFault" />
+      <Enumeration RawValue="4" TextValue="majorFault" />
+    </Enumerations>
+  </CustomPoller>
+</CustomPollers>

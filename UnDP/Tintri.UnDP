@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomPollers version="9.0">
+  <CustomPoller UniqueName="cacheHitRatio" Description="&quot;The current cache hit ratio, measured in percent of IO satisfied from flash storage.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.29" MIB="VMSTORE-MIB:cacheHitRatio" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="%" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="Generic" LabelDetail="networkLatency">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="daysTillFull" Description="&quot;Days until space capacity is exhausted.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.17" MIB="VMSTORE-MIB:daysTillFull" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="diskLatency" Description="&quot;Overall latency in milliseconds contributed by the hard disks.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.28" MIB="VMSTORE-MIB:diskLatency" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="ms" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="Generic" LabelDetail="networkLatency">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="fsLatency" Description="&quot;Overall latency in milliseconds contributed by the Tintri storage excluding hard disks.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.27" MIB="VMSTORE-MIB:fsLatency" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="ms" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="Generic" LabelDetail="networkLatency">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="highIops" Description="&quot;Highest 10-minute-average IOPS from the past 7 days.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.23" MIB="VMSTORE-MIB:highIops" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="highThroughput" Description="&quot;Highest 10-minute-average throughput from the past 7 days, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.20" MIB="VMSTORE-MIB:highThroughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="hostLatency" Description="&quot;Overall latency in milliseconds contributed by the ESX hosts.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.25" MIB="VMSTORE-MIB:hostLatency" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="ms" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="iops" Description="&quot;Total IOPS includes both reads and writes.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.21" MIB="VMSTORE-MIB:iops" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="latency" Description="&quot;Average measured latency in milliseconds to respond to data request.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.24" MIB="VMSTORE-MIB:latency" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="ms" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="liveDataSpace" Description="&quot;Space used by data files that make up a VM in Gigabytes.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.14" MIB="VMSTORE-MIB:liveDataSpace" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="GB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="LiveDataSpaceInTB" Description="" OID="" MIB="" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="GigaToTera({liveDataSpace})" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="lowIops" Description="&quot;Lowest 10-minute-average IOPS from the past 7 days.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.22" MIB="VMSTORE-MIB:lowIops" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="lowThroughput" Description="&quot;Lowest 10-minute-average throughput from the past 7 days, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.19" MIB="VMSTORE-MIB:lowThroughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="model" Description="&quot;VMstore model&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.4" MIB="VMSTORE-MIB:model" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="S" Parser="Text" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="networkLatency" Description="&quot;Overall latency in milliseconds contributed by the network.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.26" MIB="VMSTORE-MIB:networkLatency" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="ms" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="numUnreadAlerts" Description="&quot;Number of unread alerts.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.8" MIB="VMSTORE-MIB:numUnreadAlerts" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="C" Parser="Counter" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="orphanedSpace" Description="&quot;Orphaned space in GB.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.11" MIB="VMSTORE-MIB:orphanedSpace" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="GB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="OrphanedSpaceInTB" Description="" OID="" MIB="" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="GigaToTera({orphanedSpace})" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="provisionedPercent" Description="&quot;The total amount of disk space provisioned for all virtual machines as percentage of system total.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.16" MIB="VMSTORE-MIB:provisionedPercent" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="%" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="remainingSpace" Description="&quot;Remaining space available on datastore in Gigabytes.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.15" MIB="VMSTORE-MIB:remainingSpace" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="GB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="RemainingSpaceInTB" Description="" OID="" MIB="" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="GigaToTera({remainingSpace})" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replBytesRemaining" Description="&quot;The logical amount of data yet to be replicated system wide.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.33" MIB="VMSTORE-MIB:replBytesRemaining" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replDstLogicalReplicatedPerDay" Description="&quot;Logical amount of incoming data replicated in the past 24 hours, measured in MB.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.39" MIB="VMSTORE-MIB:replDstLogicalReplicatedPerDay" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replDstLogicalThroughput" Description="&quot;Logical incoming replication rate, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.36" MIB="VMSTORE-MIB:replDstLogicalThroughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replDstPhysicalReplicatedPerDay" Description="&quot;Physical amount of incoming data replicated in the past 24 hours, measured in MB.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.41" MIB="VMSTORE-MIB:replDstPhysicalReplicatedPerDay" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replDstPhysicalThroughput" Description="&quot;Physical incoming replication rate, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.37" MIB="VMSTORE-MIB:replDstPhysicalThroughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replIncomingCount" Description="&quot;Number of VMs being replicated onto this system.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.32" MIB="VMSTORE-MIB:replIncomingCount" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replOutgoingCount" Description="&quot;Number of VMs configured for outgoing replication in the system.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.31" MIB="VMSTORE-MIB:replOutgoingCount" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replSrcLogicalReplicatedPerDay" Description="&quot;Logical amount of outgoing data replicated in the past 24 hours, measured in MB.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.38" MIB="VMSTORE-MIB:replSrcLogicalReplicatedPerDay" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replSrcLogicalThroughput" Description="&quot;Logical outgoing replication rate, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.34" MIB="VMSTORE-MIB:replSrcLogicalThroughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replSrcPhysicalReplicatedPerDay" Description="&quot;Physical amount of outgoing data replicated in the past 24 hours, measured in MB.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.40" MIB="VMSTORE-MIB:replSrcPhysicalReplicatedPerDay" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="replSrcPhysicalThroughput" Description="&quot;Physical outgoing replication rate, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.35" MIB="VMSTORE-MIB:replSrcPhysicalThroughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="serialNumber" Description="&quot;Tintri Serial Number&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.6" MIB="VMSTORE-MIB:serialNumber" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="S" Parser="Text" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="swVersion" Description="&quot;Software version.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.5" MIB="VMSTORE-MIB:swVersion" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="S" Parser="Text" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="throughput" Description="&quot;Current throughput, measured in MBps.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.18" MIB="VMSTORE-MIB:throughput" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="MBs" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="tintriSnapshotSpace" Description="&quot;Space used by Tintri snapshots in Gigabytes.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.12" MIB="VMSTORE-MIB:tintriSnapshotSpace" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="GB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="TintriSnapshotSpaceInTB" Description="" OID="" MIB="" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="GigaToTera({tintriSnapshotSpace})" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="uptime" Description="&quot;System up time.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.3" MIB="VMSTORE-MIB:uptime" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="S" Parser="Text" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="vmStoreStatus" Description="&quot;The status of the filesystem.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.7" MIB="VMSTORE-MIB:vmStoreStatus" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="S" Parser="Oper_Status" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="vmwSnapshotSpace" Description="&quot;Space used by VMware snapshot in Gigabytes.&quot;" OID="1.3.6.1.4.1.41456.1.2.1.1.13" MIB="VMSTORE-MIB:vmwSnapshotSpace" SNMPGetType="GetNext" NetObjectPrefix="N" GroupName="Tintri" PollerType="R" Parser="Gauge" IncludeHistory="True" Unit="GB" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="" LabelDetail="">
+    <Enumerations />
+  </CustomPoller>
+</CustomPollers>

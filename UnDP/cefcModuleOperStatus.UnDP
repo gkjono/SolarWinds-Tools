@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomPollers version="9.0">
+  <CustomPoller UniqueName="cefcModuleOperStatus" Description="&quot;This object shows the module's operational state.&quot;" OID="1.3.6.1.4.1.9.9.117.1.2.1.1.2" MIB="CISCO-ENTITY-FRU-CONTROL-MIB:cefcModuleOperStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Cisco" PollerType="S" Parser="Enumeration" IncludeHistory="False" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="Generic" LabelDetail="">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="unknown" />
+      <Enumeration RawValue="10" TextValue="mismatchConfig" />
+      <Enumeration RawValue="11" TextValue="diagFailed" />
+      <Enumeration RawValue="12" TextValue="dormant" />
+      <Enumeration RawValue="13" TextValue="outOfServiceAdmin" />
+      <Enumeration RawValue="14" TextValue="outOfServiceEnvTemp" />
+      <Enumeration RawValue="15" TextValue="poweredDown" />
+      <Enumeration RawValue="16" TextValue="poweredUp" />
+      <Enumeration RawValue="17" TextValue="powerDenied" />
+      <Enumeration RawValue="18" TextValue="powerCycled" />
+      <Enumeration RawValue="19" TextValue="okButPowerOverWarning" />
+      <Enumeration RawValue="2" TextValue="ok" />
+      <Enumeration RawValue="20" TextValue="okButPowerOverCritical" />
+      <Enumeration RawValue="21" TextValue="syncInProgress" />
+      <Enumeration RawValue="22" TextValue="upgrading" />
+      <Enumeration RawValue="23" TextValue="okButAuthFailed" />
+      <Enumeration RawValue="3" TextValue="disabled" />
+      <Enumeration RawValue="4" TextValue="okButDiagFailed" />
+      <Enumeration RawValue="5" TextValue="boot" />
+      <Enumeration RawValue="6" TextValue="selfTest" />
+      <Enumeration RawValue="7" TextValue="failed" />
+      <Enumeration RawValue="8" TextValue="missing" />
+      <Enumeration RawValue="9" TextValue="mismatchWithParent" />
+    </Enumerations>
+  </CustomPoller>
+</CustomPollers>
