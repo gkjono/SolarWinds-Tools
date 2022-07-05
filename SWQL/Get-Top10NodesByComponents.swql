@@ -1,0 +1,14 @@
+SELECT TOP 10 Count(c.ComponentID) AS [Components]
+    , c.Application.Node.NodeID
+     , c.Application.Node.Caption AS [Node]
+     , c.Application.Node.IP_Address AS [IP]
+     , c.Application.Node.Vendor
+     , c.Application.Node.MachineType
+FROM Orion.APM.Component c
+WHERE c.Disabled = 'False'
+GROUP BY c.Application.Node.NodeID
+    , c.Application.Node.Caption
+    , c.Application.Node.IP_Address
+    , c.Application.Node.Vendor
+    , c.Application.Node.MachineType
+ORDER BY [Components] DESC

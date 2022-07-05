@@ -1,0 +1,15 @@
+SELECT TOP 10 i.Interfaces + v.Volumes AS [Elements]
+    , n.Caption AS [Node]
+    , n.NodeID
+    , n.IP_Address AS [IP]
+    , n.Vendor
+    , n.MachineType
+FROM Orion.Nodes n
+INNER JOIN (SELECT COUNT(InterfaceID) AS [Interfaces], NodeID FROM Orion.NPM.Interfaces GROUP BY NodeID) AS i ON i.NodeID=n.NodeID
+INNER JOIN (SELECT COUNT(VolumeID) AS [Volumes], NodeID FROM Orion.Volumes GROUP BY NodeID) AS v ON v.NodeID=n.NodeID
+GROUP BY n.NodeID
+    , n.Caption
+    , n.IP_Address
+    , n.Vendor
+    , n.MachineType
+ORDER BY [Elements] DESC
