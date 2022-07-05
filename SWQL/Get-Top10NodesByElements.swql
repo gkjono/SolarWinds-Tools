@@ -12,4 +12,6 @@ GROUP BY n.NodeID
     , n.IP_Address
     , n.Vendor
     , n.MachineType
+    , i.Interfaces
+    , v.Volumes
 ORDER BY [Elements] DESC
