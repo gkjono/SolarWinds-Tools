@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomPollers version="9.0">
+  <CustomPoller UniqueName="amperageProbeReading" Description="&quot;0600.0030.0001.0006 This attribute defines the reading for an amperage&#xD;&#xA;        probe of type other than amperageProbeTypeIsDiscrete.&#xD;&#xA;&#xD;&#xA;        When the value for amperageProbeType is amperageProbeTypeIsPowerSupplyAmps&#xD;&#xA;        or amperageProbeTypeIsSystemA" OID="1.3.6.1.4.1.674.10892.5.4.600.30.1.6" MIB="IDRAC-MIB-SMIv2:amperageProbeReading" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.30.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="amperageProbeReadingInAmps" Description="" OID="1.3.6.1.4.1.674.10892.5.4.600.30.1.6" MIB="" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="{amperageProbeReading}/10" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.30.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="amperageProbeStatus" Description="&quot;0600.0030.0001.0005 This attribute defines the probe status of the&#xD;&#xA;        amperage probe.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.30.1.5" MIB="IDRAC-MIB-SMIv2:amperageProbeStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.30.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="chassisServiceTagName" Description="&quot;0300.0010.0001.0011 This attribute defines the service tag name of the system chassis.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.300.10.1.11" MIB="IDRAC-MIB-SMIv2:chassisServiceTagName" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="Generic" LabelDetail="Dell Service Tag">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="chassisStatus" Description="&quot;0300.0010.0001.0004 This attribute defines the status of the system chassis.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.300.10.1.4" MIB="IDRAC-MIB-SMIv2:chassisStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.300.10.1.7">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-critical" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="coolingDeviceReading" Description="&quot;0700.0012.0001.0006 This attribute defines the reading for a cooling device&#xD;&#xA;        of subtype other than coolingDeviceSubTypeIsDiscrete.  When the value&#xD;&#xA;        for coolingDeviceSubType is other than coolingDeviceSubTypeIsDiscrete, the&#xD;&#xA;        value " OID="1.3.6.1.4.1.674.10892.5.4.700.12.1.6" MIB="IDRAC-MIB:coolingDeviceReading" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.700.12.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="coolingDeviceStatus" Description="&quot;0700.0012.0001.0005 This attribute defines the probe status of the&#xD;&#xA;        cooling device.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.700.12.1.5" MIB="IDRAC-MIB:coolingDeviceStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.700.12.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="firmwareStatus" Description="&quot;0300.0060.0001.0005 This attribute defines the status of the firmware.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.300.60.1.5" MIB="IDRAC-MIB-SMIv2:firmwareStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.300.60.1.8">
+    <Enumerations>
+      <Enumeration RawValue="" TextValue="" />
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="memoryDeviceStatus" Description="&quot;1100.0050.0001.0005 This attribute defines the status of the memory device.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.1100.50.1.5" MIB="IDRAC-MIB-SMIv2:memoryDeviceStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.1100.50.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="networkDeviceStatus" Description="&quot;1100.0090.0001.0003 This attribute defines the status of the network device.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.1100.90.1.3" MIB="IDRAC-MIB:networkDeviceStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.1100.90.1.6">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="pCIDeviceStatus" Description="&quot;1100.0080.0001.0005 This attribute defines the status of the PCI device.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.1100.80.1.5" MIB="IDRAC-MIB:pCIDeviceStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.1100.80.1.9">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="physicalDiskState" Description="&quot;The current state of this physical disk.&#xD;&#xA;        Possible states:&#xD;&#xA;        1: The current state could not be determined.&#xD;&#xA;        2: The physical disk is available for use, but no RAID configuration &#xD;&#xA;        has been assigned. &#xD;&#xA;        3: A RAID configurat" OID="1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.4" MIB="IDRAC-MIB-SMIv2:physicalDiskState" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.5.1.20.130.4.1.55">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="unknown" />
+      <Enumeration RawValue="10" TextValue="readonly" />
+      <Enumeration RawValue="2" TextValue="ready" />
+      <Enumeration RawValue="3" TextValue="online" />
+      <Enumeration RawValue="4" TextValue="foreign" />
+      <Enumeration RawValue="5" TextValue="offline" />
+      <Enumeration RawValue="6" TextValue="blocked" />
+      <Enumeration RawValue="7" TextValue="failed" />
+      <Enumeration RawValue="8" TextValue="nonraid" />
+      <Enumeration RawValue="9" TextValue="removed" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="powerSupplyStatus" Description="&quot;0600.0012.0001.0005 This attribute defines the status of the power supply.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.12.1.5" MIB="IDRAC-MIB-SMIv2:powerSupplyStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.12.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="powerUnitStatus" Description="&quot;0600.0010.0001.0008 This attribute defines the status of the power unit.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.10.1.8" MIB="IDRAC-MIB-SMIv2:powerUnitStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.10.1.7">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="powerUsagePeakAmps" Description="&quot;0600.0060.0001.0012 This attribute defines the peak amperage reading&#xD;&#xA;        (in tenths of Amps) for this entity since the date and time specified&#xD;&#xA;        by the powerUsagePeakAmpsStartDateName attribute.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.60.1.12" MIB="IDRAC-MIB:powerUsagePeakAmps" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.60.1.6">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="powerUsagePeakWatts" Description="&quot;0600.0060.0001.0009 This attribute defines the peak wattage reading&#xD;&#xA;        (in Watts) for this entity since the date and time specified by the&#xD;&#xA;        powerUsagePeakWattsStartDateName attribute.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.60.1.9" MIB="IDRAC-MIB:powerUsagePeakWatts" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.60.1.6">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="powerUsageStatus" Description="&quot;0600.0060.0001.0005 This attribute defines the status of the&#xD;&#xA;        power usage information.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.60.1.5" MIB="IDRAC-MIB:powerUsageStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.60.1.6">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="processorDeviceStatus" Description="&quot;1100.0030.0001.0005 This attribute defines the status of the&#xD;&#xA;        processor device.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.1100.30.1.5" MIB="IDRAC-MIB-SMIv2:processorDeviceStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.1100.30.1.26">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="systemBatteryStatus" Description="&quot;0600.0050.0001.0005 This attribute defines the status of the battery.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.50.1.5" MIB="IDRAC-MIB-SMIv2:systemBatteryStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.50.1.7">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-Critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="systemBIOSStatus" Description="&quot;0300.0050.0001.0005 This attribute defines the status of the system BIOS.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.300.50.1.5" MIB="IDRAC-MIB-SMIv2:systemBIOSStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="Generic" LabelDetail="System Bios Status">
+    <Enumerations>
+      <Enumeration RawValue="" TextValue="" />
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-Recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="systemSlotStatus" Description="&quot;1200.0010.0001.0005 This attribute defines the status of the system slot.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.1200.10.1.5" MIB="IDRAC-MIB:systemSlotStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.1200.10.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="temperatureProbeReading" Description="&quot;0700.0020.0001.0006 This attribute defines the reading for a temperature&#xD;&#xA;        probe of type other than temperatureProbeTypeIsDiscrete.  When the value&#xD;&#xA;        for temperatureProbeType is other than temperatureProbeTypeIsDiscrete,&#xD;&#xA;        the value ret" OID="1.3.6.1.4.1.674.10892.5.4.700.20.1.6" MIB="IDRAC-MIB-SMIv2:temperatureProbeReading" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.700.20.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="temperatureProbeReadingInFahrenheit" Description="" OID="1.3.6.1.4.1.674.10892.5.4.700.20.1.6" MIB="" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="CtoF({temperatureProbeReading}/10)" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.700.20.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="temperatureProbeStatus" Description="&quot;0700.0020.0001.0005 This attribute defines the probe status of the&#xD;&#xA;        temperature probe.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.700.20.1.5" MIB="IDRAC-MIB-SMIv2:temperatureProbeStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.700.20.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="virtualDiskState" Description="&quot;The current state of this virtual disk&#xD;&#xA;        (which includes any member physical disks.)&#xD;&#xA;        Possible states:&#xD;&#xA;        1: The current state could not be determined.&#xD;&#xA;        2: The virtual disk is operating normally or optimally.&#xD;&#xA;        3: The virtu" OID="1.3.6.1.4.1.674.10892.5.5.1.20.140.1.1.4" MIB="IDRAC-MIB-SMIv2:virtualDiskState" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.5.1.20.140.1.1.36">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="unknown" />
+      <Enumeration RawValue="2" TextValue="online" />
+      <Enumeration RawValue="3" TextValue="failed" />
+      <Enumeration RawValue="4" TextValue="degraded" />
+    </Enumerations>
+  </CustomPoller>
+  <CustomPoller UniqueName="voltageProbeReading" Description="&quot;0600.0020.0001.0006 This attribute defines the reading for a voltage&#xD;&#xA;        probe of type other than voltageProbeTypeIsDiscrete.  When the value&#xD;&#xA;        for voltageProbeType is other than voltageProbeTypeIsDiscrete, the value&#xD;&#xA;        returned for this a" OID="1.3.6.1.4.1.674.10892.5.4.600.20.1.6" MIB="IDRAC-MIB-SMIv2:voltageProbeReading" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.20.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="voltageProbeReadingInVolts" Description="" OID="1.3.6.1.4.1.674.10892.5.4.600.20.1.6" MIB="" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="F" Parser="None" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="{voltageProbeReading}/1000" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.20.1.8">
+    <Enumerations />
+  </CustomPoller>
+  <CustomPoller UniqueName="voltageProbeStatus" Description="&quot;0600.0020.0001.0005 This attribute defines the probe status of the&#xD;&#xA;        voltage probe.&quot;" OID="1.3.6.1.4.1.674.10892.5.4.600.20.1.5" MIB="IDRAC-MIB-SMIv2:voltageProbeStatus" SNMPGetType="GetSubTree" NetObjectPrefix="N" GroupName="Dell iDRAC" PollerType="S" Parser="Enumeration" IncludeHistory="True" Unit="" TimeUnitId="0" TimeUnitQuantity="0" DefaultDisplayTimeUnitId="0" Formula="" LabelType="SameTable" LabelDetail="1.3.6.1.4.1.674.10892.5.4.600.20.1.8">
+    <Enumerations>
+      <Enumeration RawValue="1" TextValue="Other" />
+      <Enumeration RawValue="2" TextValue="Unknown" />
+      <Enumeration RawValue="3" TextValue="OK" />
+      <Enumeration RawValue="4" TextValue="Non-critical" />
+      <Enumeration RawValue="5" TextValue="Critical" />
+      <Enumeration RawValue="6" TextValue="Non-recoverable" />
+    </Enumerations>
+  </CustomPoller>
+</CustomPollers>
