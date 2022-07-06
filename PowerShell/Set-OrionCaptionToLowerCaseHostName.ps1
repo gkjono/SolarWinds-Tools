@@ -1,4 +1,7 @@
-﻿if (!(Get-Command Get-SwisData)) {
+﻿# Verify that the OrionSDK is installed and available.
+# This is a required prerequisite for this script.
+# It can be downloaded from https://github.com/solarwinds/OrionSDK
+if (!(Get-Command Get-SwisData)) {
     if (!(Get-PSSnapin | Where-Object { $_.Name -eq "SwisSnapin" })) {
         Try {
             Add-PSSnapin "SwisSnapin"
@@ -14,6 +17,9 @@
     }
 }
 
+# Checking to see if we already have stored credentials.
+# If not, we'll prompt for credentials and securely
+# store them with Export-CLIXML.
 $ApiCredPath = $env:Userprofile + '\ApiCreds'
 while (!(Test-Path -Path $ApiCredPath)) {
     $ApiCred = Get-Credential -Message "Please enter your credentials for SolarWinds Orion"
@@ -23,6 +29,9 @@ while (!(Test-Path -Path $ApiCredPath)) {
 }
 $SwCredential = Import-Clixml -Path $ApiCredPath -Verbose
 
+# Checking to see if we have a cached an Orion server.
+# If not, we'll prompt for hostname or IP address of the
+# primary Orion server and cache it to the Orion environment variable.
 while (!$Env:Orion) {
     $OrionServer = Read-Host "Enter the hostname or IP of your primary Orion server."
     if ($OrionServer) {
@@ -31,6 +40,9 @@ while (!$Env:Orion) {
 }
 $Swis = Connect-Swis -Hostname $env:Orion -Credential $SwCredential
 
+# Checking to see if we have set a path for where to keep the
+# log files. If not, we'll prompt for a file path and create
+# a new "ScriptLogPath" environment variable to cache it.
 if (!($Env:ScriptLogPath)) {
     $ScriptLogPath = Read-Host "Enter the file path where you'd like to store your logs."
     New-Item -Path Env:\ScriptLogPath -Value $ScriptLogPath
