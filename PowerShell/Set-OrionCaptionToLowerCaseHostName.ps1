@@ -21,7 +21,7 @@ if (!(Get-Command Get-SwisData)) {
 # If not, we'll prompt for credentials and securely
 # store them with Export-CLIXML.
 $ApiCredPath = $env:Userprofile + '\ApiCreds'
-while (!(Test-Path -Path $ApiCredPath)) {
+if (!(Test-Path -Path $ApiCredPath)) {
     $ApiCred = Get-Credential -Message "Please enter your credentials for SolarWinds Orion"
     if ($ApiCred) {
         Export-Clixml -Path $ApiCredPath -InputObject $ApiCred
@@ -32,7 +32,7 @@ $SwCredential = Import-Clixml -Path $ApiCredPath -Verbose
 # Checking to see if we have a cached an Orion server.
 # If not, we'll prompt for hostname or IP address of the
 # primary Orion server and cache it to the Orion environment variable.
-while (!$Env:Orion) {
+if (!$Env:Orion) {
     $OrionServer = Read-Host "Enter the hostname or IP of your primary Orion server."
     if ($OrionServer) {
         New-Item -Path Env:\Orion -Value $OrionServer
