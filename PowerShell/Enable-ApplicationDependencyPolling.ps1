@@ -40,12 +40,14 @@ if (!$Env:Orion) {
 }
 $Swis = Connect-Swis -Hostname $env:Orion -Credential $SwCredential
 
-# Get agent nodes that don't yet have application dependencies enabled
+# Get agent nodes that don't yet have application dependencies enabled and are not polling engines
 $NodesQuery = @"
     SELECT NodeID, ObjectSubType, IPAddress, Caption, n.CustomProperties.Environment, n.Inventory.NodeID AS [InventoryNodeID]
     FROM Orion.Nodes n
+    LEFT JOIN Orion.Engines e ON e.IP=n.IP_Address
     WHERE n.ObjectSubType='Agent' AND 
         n.Inventory.NodeID IS NULL AND 
+        e.IP IS NULL
 "@
 
 $Nodes = Get-SwisData -SwisConnection $Swis -Query $NodesQuery
