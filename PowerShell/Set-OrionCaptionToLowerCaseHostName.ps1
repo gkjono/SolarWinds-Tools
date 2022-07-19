@@ -1,4 +1,8 @@
-﻿# Verify that the OrionSDK is installed and available.
+﻿# Scripts are provided AS IS without warranty of any kind.
+# Use at your own risk.
+# https://github.com/gkjono/SolarWinds-Tools
+
+# Verify that the OrionSDK is installed and available.
 # This is a required prerequisite for this script.
 # It can be downloaded from https://github.com/solarwinds/OrionSDK
 if (!(Get-Command Get-SwisData)) {
