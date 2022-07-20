@@ -1,3 +1,7 @@
+-- Scripts are provided AS IS without warranty of any kind.
+-- Use at your own risk.
+-- https://github.com/gkjono/SolarWinds-Tools
+
 SELECT TOP 10 Count(c.ComponentID) AS [Components]
     , c.Application.Node.NodeID
      , c.Application.Node.Caption AS [Node]

@@ -1,3 +1,7 @@
+-- Scripts are provided AS IS without warranty of any kind.
+-- Use at your own risk.
+-- https://github.com/gkjono/SolarWinds-Tools
+
 SELECT TOP 10 i.Interfaces + v.Volumes + 1 AS [Elements]
     , n.Caption AS [Node]
     , n.NodeID
