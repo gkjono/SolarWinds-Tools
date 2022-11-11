@@ -1,0 +1,21 @@
+SELECT TOP 100
+    es.ServiceAssignments.ServiceName AS [Service Name]
+    , es.ServiceAssignments.TraceRouteLiveGraphUrl AS [_linkfor_Service Name]
+    , es.ServiceAssignments.ProbeName AS [Probe Name]
+    , es.ServiceAssignments.TraceRouteLiveGraphUrl AS [_linkfor_Probe Name]
+    , es.Protocol
+    , es.Port
+    , es.ServiceAssignments.LastProbeTime AS [Last Probe Time]
+    ,CASE 
+        WHEN es.Status = 0 THEN '/Orion/images/StatusIcons/Small-Unknown.gif' 
+        WHEN es.Status = 1 THEN '/Orion/images/StatusIcons/Small-Up.gif' 
+        WHEN es.Status = 2 THEN '/Orion/images/StatusIcons/Small-Down.gif' 
+        WHEN es.Status = 3 THEN '/Orion/images/StatusIcons/Small-Warning.gif' 
+        WHEN es.Status = 9 THEN '/Orion/images/StatusIcons/Small-Unmanaged.gif' 
+        WHEN es.Status = 12 THEN '/Orion/images/StatusIcons/Small-Unreachable.gif' 
+        WHEN es.Status = 14 THEN '/Orion/images/StatusIcons/Small-Critical.gif' 
+        ELSE '/Orion/images/ActiveAlerts/Notice.png' 
+        END AS [_iconfor_Service Name] 
+FROM Orion.NetPath.EndpointServices es
+WHERE es.ServiceAssignments.Enabled='True' AND es.UnManaged='False'
+ORDER BY es.Status DESC, es.ServiceAssignments.ServiceName ASC, es.ServiceAssignments.ProbeName ASC
