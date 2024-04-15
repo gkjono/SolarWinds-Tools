@@ -2,24 +2,10 @@
 # Use at your own risk.
 # https://github.com/gkjono/SolarWinds-Tools
 
-# Verify that the OrionSDK is installed and available.
+# Import the PowerShell module SwisPowerShell
 # This is a required prerequisite for this script.
 # It can be downloaded from https://github.com/solarwinds/OrionSDK
-if (!(Get-Command Get-SwisData)) {
-    if (!(Get-PSSnapin | Where-Object { $_.Name -eq "SwisSnapin" })) {
-        Try {
-            Add-PSSnapin "SwisSnapin"
-        } Catch {
-            if (Test-Path "C:\Program Files (x86)\SolarWinds\Orion SDK\SWQL Studio\SwisPowerShell.dll") {
-                C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe "C:\Program Files (x86)\SolarWinds\Orion SDK\SWQL Studio\SwisPowerShell.dll" | Out-Null
-                C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe "C:\Program Files (x86)\SolarWinds\Orion SDK\SWQL Studio\SwisPowerShell.dll" | Out-Null
-            } else {
-                Write-Host "This script requires the OrionSDK to be installed." -ForegroundColor Red
-                Write-Host "https://github.com/solarwinds/OrionSDK" -ForegroundColor Red
-            }
-        }
-    }
-}
+Import-Module SwisPowerShell
 
 # Checking to see if we already have stored credentials.
 # If not, we'll prompt for credentials and securely
